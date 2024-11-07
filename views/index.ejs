@@ -372,7 +372,7 @@ https://cdn.jsdelivr.net/npm/@fontsource/geist-sans@5.1.0/600.min.css
   <div class="container">
     <div class="music-list">
       <h3>Gösteri Müzik Listesi</h3>
-      <% songs.forEach((song, index) => { %>
+    <% songs.forEach(song => { %>
       <div class="song-item">
         <img src="https://i.hizliresim.com/fkbw8pl.png?_gl=1*1vg8chf*_ga*MTk0NDQzNzcxOC4xNzI4MjQ2NjA4*_ga_M9ZRXYS2YN*MTczMDkyNDA2OS4zLjEuMTczMDkyNDA4My40Ni4wLjA." alt="Song image">
         <audio id="audio-<%= index %>" src="<%= song.filePath %>" type="audio/mpeg"></audio>
@@ -432,9 +432,12 @@ https://cdn.jsdelivr.net/npm/@fontsource/geist-sans@5.1.0/600.min.css
           </div>
         </div>
       </div>
-      <% }) %>
+    <% }) %>
     </div>
-
+<!-- Eğer şarkı yoksa -->
+  <% if (songs.length === 0) { %>
+    <p>Henüz eklenmiş bir şarkı bulunmamaktadır.</p>
+  <% } %>
   </div>
 
   <script>
