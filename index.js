@@ -7,11 +7,9 @@ const ejs = require('ejs');
 
 const app = express();
 
-// MongoDB bağlantısı
-mongoose.connect('mongodb+srv://mongo:mongo@cluster0.6us6keo.mongodb.net/music-app?retryWrites=true&w=majority', {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-}).then(() => console.log('MongoDB bağlantısı başarılı'))
+// MongoDB bağlantısı (geçerli seçeneklerle)
+mongoose.connect('mongodb+srv://mongo:mongo@cluster0.6us6keo.mongodb.net/music-app?retryWrites=true&w=majority')
+  .then(() => console.log('MongoDB bağlantısı başarılı'))
   .catch(err => console.error('MongoDB bağlantı hatası:', err));
 
 // EJS ayarları
