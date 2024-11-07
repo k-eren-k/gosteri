@@ -3,6 +3,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const path = require('path');
 const songRoutes = require('./routes/songs');
+const ejs = require('ejs');
 
 const app = express();
 
