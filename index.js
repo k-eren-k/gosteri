@@ -13,7 +13,6 @@ mongoose.connect('mongodb+srv://mongo:mongo@cluster0.6us6keo.mongodb.net/?retryW
   .catch(err => console.error('MongoDB bağlantı hatası:', err));
 
 app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
