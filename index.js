@@ -12,7 +12,6 @@ mongoose.connect('mongodb+srv://mongo:mongo@cluster0.6us6keo.mongodb.net/?retryW
 }).then(() => console.log('MongoDB bağlantısı başarılı'))
   .catch(err => console.error('MongoDB bağlantı hatası:', err));
 
-app.use(express.json());
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
